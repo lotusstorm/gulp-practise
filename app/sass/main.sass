@@ -8,6 +8,10 @@ $color5: #9a9a9a
 	display: flex
 	flex-flow: row wrap
 
+%font
+	font:
+		family: 'Roboto', medium
+		size: 30px
 
 *
 	margin: 0
@@ -57,11 +61,13 @@ header
 			family: 'Roboto', light
 			size: 14px
 		color: $color3
-		padding: 0 15px
+		margin: 0 15px
+		padding: 7px 0
 
 		&:hover
 			transition-duration: .3s
 			color: $color4
+			border-bottom: 1px solid $color4
 
 #anderHeader
 	display: flex
@@ -96,7 +102,7 @@ header
 #midlContent
 	display: flex
 	justify-content: center
-	height: 3440px
+	height: 2500px
 	width: 100%
 	background-color: $color3
 
@@ -115,9 +121,7 @@ header
 	color: $color1
 
 	h1
-		font:
-			size: 30px
-			family: 'Roboto', medium
+		@extend %font
 
 	p
 		margin-top: 30px
@@ -125,18 +129,21 @@ header
 .inWelcome
 	color: $color4
 
+	h1
+		@extend %font
+
 .navIcon
 	display: flex
 	flex-flow: wrap
 	justify-content: space-between
-	width: 1000px
-	height: 500px
+	width: 100%
 	margin-top: 50px
 	text-align: center
 
 .icon
 	height: 210px
 	width: 305px
+	margin-bottom: 40px
 	border: 1px solid $color1
 
 	h1
@@ -157,16 +164,18 @@ header
 		margin-top: 10px
 
 #meetUs
-	width: 1000px
+	width: 100%
 	height: 440px
-	margin-top: 40px
 	text-align: center
+
+	h1
+		@extend %font
 
 .wrapForUs
 	display: flex
 	align-items: center
 	justify-content: space-between
-	height: 400px
+	height: 350px
 
 .social
 	display: flex
@@ -230,7 +239,237 @@ header
 	text-align: center
 	height: 80px
 	width: 100%
-	background-color: $color1
+	background-color: rgba($color1, 0.75)
 
 	h1
 		color: $color3
+		@extend %font
+
+#lastWork
+	display: flex
+	flex-direction: column
+	align-items: center
+	width: 100%
+	height: 810px
+	text-align: center
+
+	h1
+		@extend %font
+
+.workNav
+	display: flex
+	flex-flow: row
+	width: 700px
+	height: 30px
+	justify-content: space-around
+	margin-top: 20px
+	
+	h2
+		color: $color2
+		height: 27px
+		font:
+			family: 'Roboto', medium
+			size: 20px
+
+		&:hover
+			color: $color4
+			border-bottom: 2px inset $color4
+			transition-duration: .2s
+
+.showBox
+	width: 100%
+	height: 285px
+	overflow: hidden
+	margin: 20px 0
+	background-color: $color5
+
+#btnSeeMore
+	display: flex
+	align-items: center
+	justify-content: center
+	height: 35px
+	width: 110px
+	background-color: $color4
+	border-radius: 3px
+	cursor: pointer
+	margin-top: 20px
+
+	h1
+		font:
+			size: 15px
+			family: 'Roboto', medium
+		color: $color3
+
+	&:hover
+		border: 1px solid $color4
+		background-color: $color3
+
+		h1
+			color: $color4
+
+#pricingPlans
+	display: flex
+	flex-direction: column
+	align-items: center
+	flex-direction: space-around
+	text-align: center
+	width: 100%
+	height: 400px
+	margin-top: 50px
+	color: $color2
+
+	h1
+		@extend %font
+		width: 100%
+		color: $color1
+		height: 37px
+
+	li
+		list-style-type: none
+		font:
+			family: "Roboto", medium
+			size: 12px
+		margin-top: 10px
+
+	.priceBox
+		display: flex
+		flex-direction: column
+		align-items: center
+		height: 300px
+		width: 170px
+		text-align: center
+		margin: 0 30px
+
+		p
+			font:
+				family: "Roboto", medium
+				size: 15px
+		
+		&:hover 
+			
+			.visBox, #orderNowBtn
+				background-color: $color4
+				border: 1px solid $color4
+				transition-duration: .4s
+
+			h1
+				color: $color3
+
+			p
+				color: $color4
+
+.priceWrapper
+	display: flex
+	width: 100%
+	margin-top: 50px
+
+.visBox
+	display: flex
+	align-items: center
+	height: 60px
+	width: 100%
+	margin-top: 20px
+	border: 1px solid $color5
+
+#orderNowBtn
+	display: flex
+	height: 30px
+	width: 100px
+	border: 1px solid $color5
+	border-radius: 3px
+	text-align: center
+	align-items: center
+	margin-top: 15px
+	cursor: pointer
+
+	h1
+		font-size: 10px
+		height: 12px
+
+#sayHi
+	display: flex
+	flex-direction: column
+	height: 450px
+	width: 100%
+	align-items: center
+	text-align: center
+	background-color: $color2
+	
+	h1
+		@extend %font
+		width: 100%
+		color: $color3
+		height: 37px
+		margin-top: 10px
+
+
+
+input
+	outline: none
+	background-color: $color2
+	border: 1px solid rgba($color3, 0.9)
+	padding-left: 10px
+
+textarea
+	outline: none
+	background-color: $color2
+	border: 1px solid rgba($color3, 0.9)
+	padding-left: 10px
+	padding-top: 15px
+	text-decoration-color: $color3
+
+.hiWrap
+	display: flex
+	flex-flow: wrap
+	width: 1000px
+
+.yName, .yEmail
+	height: 50px
+	width: 480px
+	margin-top: 10px
+	color: $color3
+	font-size: 15px
+
+	&::placeholder
+		color: rgba($color3, 0.9)
+		font-family: 'Roboto', medium
+
+.yName
+	margin-right: 16px
+
+.yMessage
+	height: 200px
+	width: 1000px
+	margin-top: 30px
+	color: $color3
+	font-size: 15px
+
+	&::placeholder
+		color: rgba($color3, 0.9)
+		font-family: 'Roboto', medium
+
+#seyBtn
+	display: flex
+	height: 40px
+	width: 150px
+	justify-content: center
+	align-items: center
+	margin-top: 15px
+	background-color: $color4
+	cursor: pointer
+
+	h2
+		font-size: 20px
+		color: $color3
+
+	&:hover 
+		border: 1px solid $color4
+		background-color: $color2
+
+		h2
+			color: $color4
+
+footer
+	width: 100%
+	height: 500px
+	background-color: $color1
