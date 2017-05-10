@@ -1,0 +1,236 @@
+$color1: #1a1a1a
+$color2: #8f8e91
+$color3: #fffcf4
+$color4: #1dde85
+$color5: #9a9a9a
+
+%flex
+	display: flex
+	flex-flow: row wrap
+
+
+*
+	margin: 0
+	padding: 0
+
+body, html
+	height: 100%
+	width: 100%
+
+a 
+	text-decoration: none
+
+header
+	@extend %flex
+	height: 120px
+	width: 100%
+	background-color: $color1
+	border-bottom: 1px solid $color2
+	justify-content: space-between
+
+.logo
+	@extend %flex
+	align-items: center
+	margin-left: 200px
+
+	h1
+		font:
+			family: 'Roboto', regular
+			size: 40px
+		color: $color3
+
+.forLogo
+	font:
+		family: 'Pacifico', regular
+		size: 40px
+	color: $color4
+
+.nav
+	display: flex
+	flex-flow: row wrap
+	align-items: center
+	justify-content: flex-end
+	margin-right: 15px
+
+	p
+		font:
+			family: 'Roboto', light
+			size: 14px
+		color: $color3
+		padding: 0 15px
+
+		&:hover
+			transition-duration: .3s
+			color: $color4
+
+#anderHeader
+	display: flex
+	flex-flow: wrap
+	align-items: center
+	justify-content: center
+	height: 680px
+	width: 100%
+	background-color: $color1
+
+.mid 
+	width: 800px
+	text-align: center
+
+	h1 
+		color: $color3
+		font:
+			family: 'Roboto', light
+			size: 48px
+
+	p 
+		color: $color3
+		font:
+			family: 'Roboto', light
+			size: 18px
+		margin-top: 30px
+
+.color
+	color: $color4
+	font-family: 'Exo', Black
+
+#midlContent
+	display: flex
+	justify-content: center
+	height: 3440px
+	width: 100%
+	background-color: $color3
+
+#wrapper
+	display: flex
+	flex-direction: column
+	align-items: center
+	height: 100%
+	width: 1000px
+
+.welcome
+	height: 120px
+	width: 800px
+	text-align: center
+	margin-top: 100px
+	color: $color1
+
+	h1
+		font:
+			size: 30px
+			family: 'Roboto', medium
+
+	p
+		margin-top: 30px
+
+.inWelcome
+	color: $color4
+
+.navIcon
+	display: flex
+	flex-flow: wrap
+	justify-content: space-between
+	width: 1000px
+	height: 500px
+	margin-top: 50px
+	text-align: center
+
+.icon
+	height: 210px
+	width: 305px
+	border: 1px solid $color1
+
+	h1
+		margin-top: -5px
+		color: $color1
+		font:
+			family: 'Roboto', medium
+			size: 24px
+
+	p
+		margin-top: 40px
+		color: $color1
+		font:
+			family: 'Roboto', medium
+			size: 14px
+
+	img
+		margin-top: 10px
+
+#meetUs
+	width: 1000px
+	height: 440px
+	margin-top: 40px
+	text-align: center
+
+.wrapForUs
+	display: flex
+	align-items: center
+	justify-content: space-between
+	height: 400px
+
+.social
+	display: flex
+	border:
+		top: 1px solid $color3
+		bottom: 1px solid $color3
+	width: 100%
+	height: 30px
+	margin-bottom: -35px
+	align-items: center
+	justify-content: center
+
+	img
+		display: 
+		height: 20px 
+		width: 20px
+		padding: 0 3px
+
+.box
+	display: flex
+	overflow: hidden
+	flex-direction: column
+	justify-content: flex-end
+	width: 230px
+	height: 280px
+	background-color: $color5
+	transition-duration: .5s
+
+	&:hover
+		display: flex
+		width: 230px
+		height: 320px
+		background-color: $color4
+
+		.social
+			display: flex
+			border:
+				top: 1px solid $color3
+				bottom: 1px solid $color3
+			width: 100%
+			height: 30px
+			margin-bottom: 50px
+			align-items: center
+			transition-duration: .5s
+			justify-content: center
+
+			img
+				height: 20px 
+				width: 20px
+				padding: 0 3px
+
+		.user
+			transition-duration: .45s
+			flex-grow: 1
+			background-color: rgba($color4, 0.4)
+
+.user
+	display: flex
+	align-items: center
+	justify-content: center
+	text-align: center
+	height: 80px
+	width: 100%
+	background-color: $color1
+
+	h1
+		color: $color3
